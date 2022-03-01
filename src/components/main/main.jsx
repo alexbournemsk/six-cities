@@ -89,7 +89,7 @@ export const Main = () => {
 
               <div className="cities__places-list places__list tabs__content">
                 {cardsData.map((item)=><
-                  OfferCard price = {item.price} key={item.id}/>)}
+                  OfferCard price = {item.price} key = {item.id} img = {item.img} title = {item.title}/>)}
 
 
               </div>

@@ -9,7 +9,7 @@ const OfferCard = function (props) {
       </div>
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
-          <img className="place-card__image" src="img/apartment-01.jpg" width="260" height="200"
+          <img className="place-card__image" src={props.img} width="260" height="200"
             alt="Place image"/>
         </a>
       </div>
@@ -33,7 +33,7 @@ const OfferCard = function (props) {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">Beautiful &amp; luxurious apartment at great location</a>
+          <a href="#">{props.title}</a>
         </h2>
         <p className="place-card__type">Apartment</p>
       </div>
@@ -44,7 +44,9 @@ const OfferCard = function (props) {
 
 
 OfferCard.propTypes = {
-  price: PropTypes.number.isRequired
+  price: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 export default OfferCard;
 

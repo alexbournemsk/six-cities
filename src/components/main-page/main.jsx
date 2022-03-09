@@ -2,7 +2,7 @@ import React from 'react';
 import OfferCard from '../offer-card/offer-card';
 import {cardsData} from '../../mock-data';
 
-export const Main = () => {
+export const MainPage = () => {
   return (
     <div className="page page--gray page--main">
       <header className="header">

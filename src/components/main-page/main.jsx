@@ -1,10 +1,12 @@
+// настроить offerlist
+
 import React from 'react';
-import OfferCard from '../offer-card/offer-card';
-import {cardsData} from '../../mock-data';
+import PropTypes from "prop-types";
+import {OfferList} from '../offer-list/offer-list';
 
 export const MainPage = (props) => {
-  const offers = props;
-  console.log(offers);
+  const {offers} = props;
+
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -90,9 +92,8 @@ export const MainPage = (props) => {
               </form>
 
               <div className="cities__places-list places__list tabs__content">
-                {cardsData.map((item)=><
-                  OfferCard price = {item.price} key = {item.id} img = {item.img} title = {item.title}/>)}
 
+                <OfferList offers = {offers}/>
 
               </div>
 
@@ -105,4 +106,9 @@ export const MainPage = (props) => {
       </main>
     </div>
   );
+};
+
+
+MainPage.propTypes = {
+  offers: PropTypes.array.isRequired,
 };

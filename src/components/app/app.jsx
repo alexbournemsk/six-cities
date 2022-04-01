@@ -27,7 +27,7 @@ export const App = (props) => {
         </Route>
 
         <Route exact path="/favorites">
-          <FavoritesPage />
+          <FavoritesPage offers = {offers}/>
         </Route>
         <Route>
           <PageNotFound />

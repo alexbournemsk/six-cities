@@ -3,8 +3,15 @@ import PropTypes from "prop-types";
 
 export const OfferCard = function (props) {
   const offer = props.offer;
+  const {handleMouseMove} = props;
+  const handleMouse = () => {
+    handleMouseMove(offer);
+  };
   return (
-    <article className="cities__place-card place-card">
+    <article
+      onMouseEnter = {handleMouse}
+      onMouseLeave = {handleMouse}
+      className="cities__place-card place-card">
       <div className="place-card__mark">
         <span>Premium</span>
       </div>

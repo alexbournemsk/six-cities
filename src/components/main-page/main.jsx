@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 import {OfferList} from '../offer-list/offer-list';
 
+
 export const MainPage = (props) => {
   const {offers} = props;
 

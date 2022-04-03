@@ -18,8 +18,9 @@ export const App = (props) => {
           <MainPage offers = {offers}/>
         </Route>
 
-        <Route exact path="/offer">
-          <RoomPage />
+        <Route path="/offer/:id" exact>
+          <RoomPage
+            offers = {offers}/>
         </Route>
 
         <Route exact path="/login">

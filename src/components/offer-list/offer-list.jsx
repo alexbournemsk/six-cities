@@ -7,8 +7,8 @@ export const OfferList = (props) => {
   const {offers} = props;
   const [activeCard, setActiveCard] = useState(0);
   const handleMouseMove = (item) => {
-    console.log(item);
-  }
+    setActiveCard(item);
+  };
 
   return (
     <div className="cities__places-list places__list tabs__content">
@@ -17,6 +17,7 @@ export const OfferList = (props) => {
           <OfferCard
             key={card.id}
             offer={card}
+            activeCard = {activeCard}
             handleMouseMove = {handleMouseMove}
           />
         );

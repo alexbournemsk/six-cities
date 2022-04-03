@@ -1,6 +1,11 @@
 import React from "react";
 
-export const RoomPage = () => {
+import {useParams} from "react-router-dom";
+
+export const RoomPage = (props) => {
+  const id = Number(useParams().id);
+  const offer = props.offers[id - 1];
+  console.log (offer);
   return (
 
     <div className="page">

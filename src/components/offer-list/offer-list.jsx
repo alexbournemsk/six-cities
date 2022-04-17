@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 export const OfferList = (props) => {
   const {offers} = props;
-  const [activeCard, setActiveCard] = useState(0);
+  const [activeCard, setActiveCard] = useState(null);
   const handleMouseMove = (item) => {
     setActiveCard(item);
   };

@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
-import {useHistory} from 'react-router-dom';
+// import {useHistory} from 'react-router-dom';
 
 export const OfferCard = function (props) {
-  const history = useHistory();
+  // const history = useHistory();
   const offer = props.offer;
   const activeCard = props.activeCard;
   const {handleMouseMove} = props;
@@ -12,22 +12,24 @@ export const OfferCard = function (props) {
     handleMouseMove(offer);
   };
   return (
+
     <article
       onMouseEnter = {handleMouse}
       onMouseLeave = {handleMouse}
       onClick = {()=>{
-        console.log(activeCard.price);
-        // history.push(`/offer`)
+        //  history.push(`/offer`)
       }}
       className="cities__place-card place-card">
       <div className="place-card__mark">
         <span>Premium</span>
       </div>
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#">
+
+        <Link to={`room/${offer.id}`}>
           <img className="place-card__image" src={offer.previewImage} width="260" height="200"
             alt="Place image"/>
-        </a>
+        </Link>
+
       </div>
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
@@ -50,7 +52,7 @@ export const OfferCard = function (props) {
         </div>
         <h2 className="place-card__name">
 
-          <Link to={`offer/${offer.id}`}>
+          <Link to={`room/${offer.id}`}>
             {offer.title}
           </Link>
         </h2>

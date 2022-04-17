@@ -3,6 +3,10 @@ import FavoriteCard from "./favorites-card";
 
 export const FavoritesPage = (props) => {
   const {offers} = props;
+  const favoriteOffers = offers.filter((el) => {
+    return el.isFavorite;
+  });
+
   return (
     <div className="page">
       <header className="header">
@@ -43,7 +47,7 @@ export const FavoritesPage = (props) => {
 
                 </div>
                 <div className="favorites__places">
-                  {offers.map((card) => {
+                  {favoriteOffers.map((card) => {
                     return (
                       <FavoriteCard
                         key={card.id}
